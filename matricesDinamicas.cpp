@@ -11,7 +11,7 @@ void printMatrix(int**, int, int);
 int** punteroMatriz, nFilas, nCol;
 
 int main(){
-	pedirDatos();
+	pedirDatos();//preguntar al ingeniero manana 
 	printMatrix(punteroMatriz, nFilas, nCol);
 	//liberar memoria para matriz 
 	for(int i=0;i<nFilas;i++){
