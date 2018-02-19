@@ -1,14 +1,15 @@
 #include <iostream>
-
+using namespace std;
 
 //prototipos
 //pedir datos de la matriz
 void pedirDatos();
 //imprimir matriz
 void printMatrix(int**, int, int);
-using namespace std;
 
-int **punteroMatriz, nFilas, nCol;
+
+int** punteroMatriz, nFilas, nCol;
+
 int main(){
 	void pedirDatos();
 	void printMatrix(punteroMatriz, nFilas, nCol);
@@ -19,16 +20,7 @@ int main(){
 	delete[] punteroMatriz;
 	return 0;
 }
-void printMatrix(int** punteroMatriz, int nFilas, int nCol){
-	cout<<"Imprimiendo matriz"<<endl;
 
-	for(int i=0;i<nFilas;i++){
-		for(int j=0;j<nCol;j++){
-			cout<<*(*(punteroMatriz+i)+j);
-		}
-		cout<<endl;
-	}
-}
 void pedirDatos(){
 	cout<<"Pedir filas de la matriz: "<<endl;
 	cin>> nFilas;
@@ -46,5 +38,15 @@ void pedirDatos(){
 			cout<<"Digite los numeros [ " <<i<<" ]"<< "["<<j<<" ]"<<endl;
 			cin >> *(*(punteroMatriz+i)+j);//puntero matriz guardando [i][j]
 		}
+	}
+}
+void printMatrix(int **punteroMatriz, int nFilas, int nCol){
+	cout<<"Imprimiendo matriz"<<endl;
+
+	for(int i=0;i<nFilas;i++){
+		for(int j=0;j<nCol;j++){
+			cout<<*(*(punteroMatriz+i)+j);
+		}
+		cout<<endl;
 	}
 }
